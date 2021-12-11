@@ -12,7 +12,7 @@ const auth = async (req, res, next) => {
         req.token = token
         next()
     } catch (e) {
-        return res.status(401).send('Unauthorized');
+        return res.status(401).send(e);
     }
 }
 
